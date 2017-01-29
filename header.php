@@ -9,8 +9,8 @@
 
         <!-- Bootstrap -->
         <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-        <link rel="stylesheet" type="text/css" href="./assets/css/media.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css?v=<?=time();?>">
+        <link rel="stylesheet" type="text/css" href="./assets/css/media.css?v=<?=time();?>">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -89,8 +89,8 @@
         <div class="container">
             <div class="page-wrapper">
             <div class="row page-content">
-                <div class="col-lg-4 sidebar-block">
+                <div class="col-lg-3 sidebar-block">
                     <?php include_once './sidebar.php'; ?>
                 </div>
-                <div class="col-lg-8 content-block">
+                <div class="col-lg-9 content-block">
                 

@@ -32,3 +32,44 @@ body {
     top: 15px;
     font-size: 20px;
 }
+.sidebar-menu-block {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.sidebar-menu {
+    padding: 0 0 0 15px;
+}
+.sidebar-menu>li>a:focus, 
+.sidebar-menu>li>a:hover {
+    text-decoration: none;
+    background-color: #3CC440;
+}
+.sidebar-menu-inner>li>a:focus,
+.sidebar-menu-inner>li>a:hover {
+    background-color: #92C794;
+}
+.products-grid {
+    padding: 20px 15px 30px;
+}
+.product-thumbnail {
+    position: relative;
+}
+.pt-buttons {
+    position: absolute;
+    bottom: 0;
+    padding: 15px 0;
+    background-color: #fff;
+    width: 100%;
+    margin-left: -13px;
+    margin-bottom: 2px;
+    border-top: 1px solid #ddd;
+}
+.qty-input {
+    width: 30px;
+    text-align: center;
+}
+.pt-shadow {
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+}
