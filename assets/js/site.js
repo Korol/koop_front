@@ -8,4 +8,6 @@ jQuery(document).ready(function($) {
         $('#btns_'+this.id).removeClass('in');
         $('#'+this.id).removeClass('pt-shadow');
     });
+
+    $(".fancybox").fancybox();
 });

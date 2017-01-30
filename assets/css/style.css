@@ -40,12 +40,18 @@ body {
     padding: 0 0 0 15px;
 }
 .sidebar-menu>li>a:focus, 
-.sidebar-menu>li>a:hover {
+.sidebar-menu>li>a:hover,
+.sidebar-menu>li.active>a,
+.sidebar-menu>li.active>a:focus,
+.sidebar-menu>li.active>a:hover {
     text-decoration: none;
     background-color: #3CC440;
 }
 .sidebar-menu-inner>li>a:focus,
-.sidebar-menu-inner>li>a:hover {
+.sidebar-menu-inner>li>a:hover,
+.sidebar-menu-inner>li.active>a,
+.sidebar-menu-inner>li.active>a:focus,
+.sidebar-menu-inner>li.active>a:hover {
     background-color: #92C794;
 }
 .products-grid {
@@ -68,8 +74,105 @@ body {
     width: 30px;
     text-align: center;
 }
+.qty-input, 
+.qty-input:read-only{
+    background-color: #fff;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+    background-color: #fff;
+}
 .pt-shadow {
     -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
 }
+.caption > h3 > a {
+    color: #222;
+}
+
+/* Lined Header */
+h3.lined {
+  position: relative;
+  text-align: center;
+}
+h3.lined span {
+  background: #fff;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+}
+h3.lined:before {
+  background: #ddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+    top: 50%;
+  width: 94%;
+  left: 3%;
+}
+
+.sidebar-banner {
+    padding-left: 30px;
+    padding-right: 0;
+}
+
+/* Product page */
+.product-info-block {
+    margin: 30px 15px 30px 10px;
+}
+.product-image-block > a.thumbnail {
+    position: relative;
+}
+.product-zoom-icon {
+    position: absolute;
+    right: 4px;
+    top: 217px;
+    font-size: 20px;
+    color: #777;
+}
+.product-tech-info h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.product-about-info > .alert-info > h1 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.product-about-info > .alert-danger > h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.product-qty-block {
+    /*width: 70%;
+    float: left;*/
+}
+.p-qty-price {
+    display: inline-block;
+    float: left;
+    font-size: 22px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.p-qty-num {
+    width: 130px;
+    display: inline-block;
+    float: left;
+}
+.p-qty-price,
+.p-qty-num {
+    margin-top: 7px;
+}
+.product-similar-header {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+

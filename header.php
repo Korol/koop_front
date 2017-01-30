@@ -89,8 +89,5 @@
         <div class="container">
             <div class="page-wrapper">
             <div class="row page-content">
-                <div class="col-lg-3 sidebar-block">
-                    <?php include_once './sidebar.php'; ?>
-                </div>
-                <div class="col-lg-9 content-block">
+                <div class="col-md-9 col-md-push-3 content-block">
                 

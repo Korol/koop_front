@@ -118,30 +118,42 @@ if(!empty($_GET['category_id'])){
     }
 }
 ?>
+
+<div class="row">
+    <div class="col-lg-12 sidebar-banner">
+        <h3 class="lined"><span>Меню</span></h3>
+    </div>
+</div>
 <div class="row">
     <div class="col-lg-12 sidebar-menu-block">
         <ul class="nav nav-pills nav-stacked sidebar-menu">
             <?php foreach($menu as $level1): ?>
             <?php $class_in = ($level1['id'] == $active_menu_id) ? ' in' : ''; ?>
-            <li role="presentation"><a href="./index.php?category_id=<?=$level1['id'];?>"><?=$level1['title'];?></a></li>
+            <?php $l1_active = ($level1['id'] == $active_menu_id) ? 'active' : ''; ?>
+            <li role="presentation" class="<?=$l1_active;?>">
+                <a href="./index.php?category_id=<?=$level1['id'];?>"><?=$level1['title'];?></a>
+            </li>
             <?php
             if(!empty($level1['childs'])):
             ?>
                 <ul class="nav nav-pills nav-stacked sidebar-menu sidebar-menu-inner collapse<?=$class_in; ?>">
                 <?php foreach($level1['childs'] as $level2): ?>
-                    <li role="presentation"><a href="./index.php?category_id=<?=$level2['id'];?>"><?=$level2['title'];?></a></li>
+                    <?php $l2_active = ($level2['id'] == $_GET['category_id']) ? 'active' : ''; ?>
+                    <li role="presentation" class="<?=$l2_active;?>"><a href="./index.php?category_id=<?=$level2['id'];?>"><?=$level2['title'];?></a></li>
                     <?php
                     if(!empty($level2['childs'])):
                     ?>
                         <ul class="nav nav-pills nav-stacked sidebar-menu sidebar-menu-inner collapse<?=$class_in; ?>">
                         <?php foreach($level2['childs'] as $level3): ?>
-                            <li role="presentation"><a href="./index.php?category_id=<?=$level3['id'];?>"><?=$level3['title'];?></a></li>
+                            <?php $l3_active = ($level3['id'] == $_GET['category_id']) ? 'active' : ''; ?>
+                            <li role="presentation" class="<?=$l3_active;?>"><a href="./index.php?category_id=<?=$level3['id'];?>"><?=$level3['title'];?></a></li>
                             <?php
                             if(!empty($level3['childs'])):
                             ?>
                                 <ul class="nav nav-pills nav-stacked sidebar-menu sidebar-menu-inner collapse<?=$class_in; ?>">
                                 <?php foreach($level3['childs'] as $level4): ?>
-                                    <li role="presentation"><a href="./index.php?category_id=<?=$level4['id'];?>"><?=$level4['title'];?></a></li>
+                                    <?php $l4_active = ($level4['id'] == $_GET['category_id']) ? 'active' : ''; ?>
+                                    <li role="presentation" class="<?=$l4_active;?>"><a href="./index.php?category_id=<?=$level4['id'];?>"><?=$level4['title'];?></a></li>
                                 <?php endforeach; ?>
                                 </ul>
                             <?php
@@ -159,5 +171,33 @@ if(!empty($_GET['category_id'])){
             ?>
             <?php endforeach; ?>
         </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 sidebar-banner">
+        <h3 class="lined"><span>Реклама</span></h3>
+    </div>
+</div>
+<div class="row sidebar-adv">
+    <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 sidebar-banner">
+        <a href="#" class="thumbnail">
+            <img src="http://lorempixel.com/output/people-q-c-250-250-<?=rand(1, 10);?>.jpg" alt="Banner">
+        </a>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 sidebar-banner">
+        <a href="#" class="thumbnail">
+            <img src="http://lorempixel.com/output/city-q-c-250-250-<?=rand(1, 10);?>.jpg" alt="Banner">
+        </a>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 sidebar-banner">
+        <a href="#" class="thumbnail">
+            <img src="http://lorempixel.com/output/business-q-c-250-250-<?=rand(1, 10);?>.jpg" alt="Banner">
+        </a>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6 sidebar-banner">
+        <a href="#" class="thumbnail">
+            <img src="http://lorempixel.com/output/technics-q-c-250-250-<?=rand(1, 10);?>.jpg" alt="Banner">
+        </a>
     </div>
 </div>
