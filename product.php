@@ -69,7 +69,7 @@ $photo_rand = rand(1, 10);
     <div class="col-lg-12 small-product-grid">
         <div class="row">
             <?php for($i = 0; $i < 6; $i++): ?>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3">
                 <a href="#" class="thumbnail">
                     <img src="http://lorempixel.com/output/food-q-c-100-100-<?=rand(1, 10);?>.jpg" alt="Food Image">
                 </a>
