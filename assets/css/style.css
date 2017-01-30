@@ -169,9 +169,20 @@ h3.lined:before {
     margin-bottom: 20px;
 }
 
-
-
-
+/* Cart Page */
+.cart-info-block {
+    padding: 0 15px 20px 10px;
+}
+.cart-products-table {
+    margin: 15px 0;
+}
+.cart-qty-column {
+    width: 150px;
+}
+.cart-tab-panels {
+    background-color: #fff;
+    padding: 15px 10px 15px 0;
+}
 
 
 

@@ -72,7 +72,7 @@ for ($i=10; $i < 19; $i++) {
                                     <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                                 </button>
                             </span>
-                            <input type="text" class="form-control qty-input" value="1">
+                            <input type="text" class="form-control qty-input" value="1" readonly>
                             <span class="input-group-btn">
                                 <button class="btn btn-default" type="button">
                                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
