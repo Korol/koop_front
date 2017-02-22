@@ -6,35 +6,36 @@ $products = array(
         'id' => 1,
         'title' => 'Lorem ipsum dolor',
         'unit' => 'шт.',
-        'price' => '23',
+        'price' => '23.50',
         'qty' => 1,
-        'cost' => '23',
+        'cost' => '23.50',
     ),
     1 => array(
         'id' => 2,
         'title' => 'Sit amet, consectetur adipisicing elit',
         'unit' => 'шт.',
-        'price' => '12',
+        'price' => '12.75',
         'qty' => 1,
-        'cost' => '12',
+        'cost' => '12.75',
     ),
     2 => array(
         'id' => 3,
         'title' => 'Consectetur harum dolor',
         'unit' => 'шт.',
-        'price' => '123',
+        'price' => '123.45',
         'qty' => 1,
-        'cost' => '123',
+        'cost' => '123.45',
     ),
     3 => array(
         'id' => 4,
         'title' => 'Reprehenderit officia cumque laboriosam',
         'unit' => 'шт.',
-        'price' => '23',
+        'price' => '23.80',
         'qty' => 1,
-        'cost' => '23',
+        'cost' => '23.80',
     ),
 );
+$cart_total = 0;
 ?>
 
 <div class="row">
@@ -69,32 +70,35 @@ $products = array(
                 <td class="text-center"><?=++$key;?></td>
                 <td><?=$product['title']; ?></td>
                 <td><?=$product['unit']; ?></td>
-                <td><?=$product['price']; ?> грн</td>
+                <td><span id="pprice_<?=$product['id'];?>"><?=$product['price']; ?></span> грн</td>
                 <td>
                     <div class="input-group">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
+                            <button class="btn btn-default ppqminus" type="button" id="ppqminus_<?=$product['id'];?>">
                                 <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                             </button>
                         </span>
-                        <input type="text" class="form-control qty-input" value="<?=$product['qty']; ?>" readonly>
+                        <input type="text" class="form-control qty-input" value="<?=$product['qty'];?>" readonly id="ppqty_<?=$product['id'];?>">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
+                            <button class="btn btn-default ppqplus" type="button" id="ppqplus_<?=$product['id'];?>">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                             </button>
                         </span>
                     </div><!-- /input-group -->
                 </td>
-                <td><?=$product['cost']; ?> грн</td>
+                <td><span class="cart-cost" id="pcost_<?=$product['id'];?>"><?=$product['cost']; ?></span> грн</td>
                 <td class="text-center">
                     <button type="button" onclick="removeFromCart(<?=$product['id'];?>)" class="btn btn-danger">&times;</button>
                 </td>
             </tr>
+            <?php
+            $cart_total += $product['cost'];
+            ?>
             <?php endforeach; ?>
             <tr>
                 <td colspan="7" class="text-right">
                     <span class="text-uppercase">Всего:</span>
-                    <span class="cart-total-cost">12345</span> грн
+                    <span class="cart-total-cost"><span id="cart_total"><?=number_format($cart_total, 2);?></span></span> грн
                 </td>
             </tr>
             </tbody>

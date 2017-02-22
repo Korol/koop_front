@@ -37,6 +37,7 @@ jQuery(document).ready(function($) {
             var pprice = $('#pprice_'+pm_id[1]).text();
             var newcost = (pprice*(pm_qty*1-1)).toFixed(2);
             $('#pcost_'+pm_id[1]).text(newcost);
+            countCartCosts();
         }
     });
 
@@ -49,10 +50,20 @@ jQuery(document).ready(function($) {
         var pprice = $('#pprice_'+pp_id[1]).text();
         var newcost = (pprice*(pp_qty*1+1)).toFixed(2);
         $('#pcost_'+pp_id[1]).text(newcost);
+        countCartCosts();
     });
 });
 
 function removeFromCart(p_id){
-    $('#cart_tr_'+p_id).hide(300);
+    $('#cart_tr_'+p_id).remove();
+    countCartCosts();
+}
+
+function countCartCosts(){
+    var summ = 0;
+    $('.cart-cost').each(function(){
+        summ += $(this).text()*1;
+    });
+    $('#cart_total').text(summ.toFixed(2));
 }
 
