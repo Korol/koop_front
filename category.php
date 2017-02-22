@@ -24,20 +24,20 @@ for ($i=1; $i < 24; $i++) {
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-8">
                         <div class="input-group">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
+                                <button class="btn btn-default pqminus" type="button" id="pqminus_<?=$i;?>">
                                     <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                                 </button>
                             </span>
-                            <input type="text" class="form-control qty-input" value="1">
+                            <input type="text" class="form-control qty-input" value="1" readonly id="pqty_<?=$i;?>">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
+                                <button class="btn btn-default pqplus" type="button" id="pqplus_<?=$i;?>">
                                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                 </button>
                             </span>
                         </div><!-- /input-group -->
                     </div>
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-4">
-                        <button class="btn btn-success pull-right" role="button">Купить</button>
+                        <button class="btn btn-success pull-right" onclick="document.location.href='/cart.php';" role="button">Купить</button>
                     </div>
                 </div>
             </div>

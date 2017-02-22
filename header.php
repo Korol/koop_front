@@ -77,9 +77,10 @@
                   </ul>
                   <!-- /top menu -->
                   <ul class="nav navbar-nav navbar-right">
-                    <li><span class="glyphicon glyphicon-shopping-cart top-cart-icon" aria-hidden="true"></span></li>
-                    <li><a href="#">Вход</a></li>
-                    <li><a href="#">Регистрация</a></li>
+                    <!-- <li><span class="glyphicon glyphicon-shopping-cart top-cart-icon" aria-hidden="true"></span></li> -->
+                    <!-- <li><a href="#">Вход</a></li>
+                    <li><a href="#">Регистрация</a></li> -->
+                    <li><a href="/cart.php">Корзина (4)</a></li>
                   </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->

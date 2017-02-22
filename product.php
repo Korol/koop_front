@@ -40,24 +40,24 @@ $photo_rand = rand(1, 10);
             <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam vel, mollitia inventore rem eveniet tenetur tempora quas officia quibusdam harum?</h4>
         </div>
         <div class="well clearfix product-qty-block">
-            <span class="p-qty-price">17.40 x</span>
+        <span class="p-qty-price"><span id="pprice_1">17.40</span> x</span>
             <div class="p-qty-num">
                 <div class="input-group">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
+                        <button class="btn btn-default ppqminus" type="button" id="ppqminus_1">
                             <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                         </button>
                     </span>
-                    <input type="text" class="form-control qty-input" value="1" readonly>
+                    <input type="text" class="form-control qty-input" value="1" readonly id="ppqty_1">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
+                        <button class="btn btn-default ppqplus" type="button" id="ppqplus_1">
                             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                         </button>
                     </span>
                 </div><!-- /input-group -->
             </div>
-            <span class="p-qty-price">= 17.40 грн</span>
-            <button type="button" class="btn btn-success btn-lg pull-right">Купить</button>
+            <span class="p-qty-price">= <span id="pcost_1">17.40</span> грн</span>
+            <button type="button" onclick="document.location.href='/cart.php';" class="btn btn-success btn-lg pull-right">Купить</button>
         </div>
     </div>
     <div class="col-lg-12">
