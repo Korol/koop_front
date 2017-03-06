@@ -20,11 +20,11 @@
         <![endif]-->
     </head>
     <body>
-        <div class="container">
-            <div class="top-banner"></div>
+        <!-- <div class="container"> -->
+            <!-- <div class="top-banner"></div> -->
 
-            <nav class="navbar navbar-default koop-navbar">
-              <div class="container-fluid">
+            <nav class="navbar navbar-default navbar-fixed-top koop-navbar">
+              <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -90,5 +90,6 @@
         <div class="container">
             <div class="page-wrapper">
             <div class="row page-content">
+            <?php if($_SERVER['REQUEST_URI'] == '/') include_once 'carousel.php'; ?>
                 <div class="col-md-9 col-md-push-3 content-block">
                 

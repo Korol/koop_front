@@ -3,6 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     background-color: #e5e5e5;
+    padding-top: 50px;
 }
 .page-wrapper {
     background-color: #fff;
@@ -69,6 +70,10 @@ body {
     margin-left: -13px;
     margin-bottom: 2px;
     border-top: 1px solid #ddd;
+}
+.product-qty-grid-block {
+    max-width: 120px;
+    min-width: 120px;
 }
 .qty-input {
     width: 30px;
@@ -168,6 +173,33 @@ h3.lined:before {
     margin-top: 30px;
     margin-bottom: 20px;
 }
+/* new product page styles */
+.product-card-title {
+    font-size: 20px;
+    margin-top: 0;
+}
+.product-card-id-label {
+    font-size: 18px;
+}
+.product-card-id-value {
+    font-size: 16px;
+    margin-left: 5px;
+}
+.product-card-price {
+    margin: 15px 0;
+    font-size: 30px;
+    color: #328d02;
+    font-weight: bold;
+}
+.pc-additional-images {
+    margin-bottom: 30px;
+}
+.pc-a-i-item {
+    width: 78px;
+    height: 78px;
+    margin: 3px 3px 3px 0;
+    float: left;
+}
 
 /* Cart Page */
 .cart-info-block {
@@ -184,6 +216,45 @@ h3.lined:before {
     padding: 15px 10px 15px 0;
 }
 
-
+/* Main Carousel */
+.main-carousel {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.carousel-control {
+    width: 50px;
+}
+.main-carousel .carousel-control .glyphicon-menu-left,
+.main-carousel .carousel-control .glyphicon-menu-right {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+}
+.main-carousel .carousel-control .glyphicon-menu-left {
+    margin-left: -20px;
+}
+.main-carousel .carousel-control .glyphicon-menu-right {
+    margin-right: 20px;
+}
+.carousel-indicators {
+    bottom: 0;
+}
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    margin-left: 2px;
+    margin-right: 2px;
+    text-shadow: 3px 3px 2px rgba(150, 150, 150, 1);
+    box-shadow: 1px 2px 6px rgba(0,0,0,0.8);
+    background-color: #fff;
+}
+.carousel-indicators .active {
+    width: 17px;
+    height: 17px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #3CC440;
+}
 
 

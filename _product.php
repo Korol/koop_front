@@ -5,7 +5,7 @@ $photo_rand = rand(1, 10);
 ?>
 
 <div class="row product-info-block">
-    <div class="col-lg-4 col-md-4 col-sm-6">
+    <div class="col-lg-4">
         <div class="row">
             <div class="col-lg-12 product-image-block">
                 <a class="fancybox thumbnail" rel="group" href="http://lorempixel.com/output/food-q-c-600-600-<?=$photo_rand;?>.jpg">
@@ -14,34 +14,30 @@ $photo_rand = rand(1, 10);
                 </a>
             </div>
         </div>
-        <div class="row pc-additional-images">
-            <div class="col-xs-12 clearfix">
-                <?php for ($i = 1; $i <= 5; $i++): ?>
-                <div class="pc-a-i-item">
-                    <a class="fancybox thumbnail" rel="group" href="http://lorempixel.com/output/food-q-c-600-600-<?=$i;?>.jpg">
-                        <img src="http://lorempixel.com/output/food-q-c-150-150-<?=$i;?>.jpg" alt="Food Image">
-                    </a>
-                </div>
-                <?php endfor; ?>
+        <div class="row product-tech-info">
+            <div class="col-lg-12 text-center">
+                <h3><span class="label label-success">17.40 грн</span></h3>
+            </div>
+            <div class="col-lg-12 text-center">
+                <h3><span class="label label-warning">1 кг, 1 шт.</span></h3>
+            </div>
+            <div class="col-lg-12 text-center">
+                <h3><span class="label label-warning">Производитель такой-то</span></h3>
+            </div>
+            <div class="col-lg-12 text-center">
+                <h3><span class="label label-warning">Артикул: 123456</span></h3>
             </div>
         </div>
     </div>
-    <div class="col-lg-8 col-md-8 col-sm-6 product-about-info">
-        <div class="row pc-title">
-            <div class="col-xs-12">
-                <h1 class="product-card-title">Продукт такой-то (мягкая упаковка), 1 кг, ТМ «Возрождение»</h1>
-            </div>
+    <div class="col-lg-8 product-about-info">
+        <div class="alert alert-info">
+            <h1>Продукт такой-то (мягкая упаковка), 1 кг, ТМ «Возрождение»</h1>
         </div>
-        <div class="row pc-id">
-            <div class="col-xs-12">
-                <span class="product-card-id-label">ID:</span>
-                <span class="product-card-id-value">543</span>
-            </div>
+        <div class="well">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis vel ducimus mollitia sed qui odit provident, sunt dolor totam possimus illum assumenda soluta voluptas facilis earum obcaecati voluptate cum nisi! Soluta explicabo sint commodi? Ducimus tempore ad dignissimos, modi consequuntur illum neque omnis alias nobis eos numquam tenetur, nisi quas.
         </div>
-        <div class="row pc-price">
-            <div class="col-xs-12">
-                <div class="product-card-price">17.40 грн/шт</div>
-            </div>
+        <div class="alert alert-danger">
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam vel, mollitia inventore rem eveniet tenetur tempora quas officia quibusdam harum?</h4>
         </div>
         <div class="well clearfix product-qty-block">
         <span class="p-qty-price"><span id="pprice_1">17.40</span> x</span>
@@ -63,23 +59,14 @@ $photo_rand = rand(1, 10);
             <span class="p-qty-price">= <span id="pcost_1">17.40</span> грн</span>
             <button type="button" onclick="document.location.href='/cart.php';" class="btn btn-success btn-lg pull-right">Купить</button>
         </div>
-        <div class="row pc-description">
-            <div class="col-xs-12">
-                <p>
-                    Вода питьевая столовая ТМ «Криниця» сильногазированная на основе природной воды, которая добывается из артезианской скважины №5 глубиной 68 м c. Корнеевка Веселовского р-на Запорожской области. Минерализация воды не превышает 1,0 г/л. Вода полноценного минерального состава. Вода употребляется как для питья так и для приготовления пищи.
-                </p>
-            </div>
-        </div>
     </div>
-    <?php /* ?>
     <div class="col-lg-12">
         <textarea class="form-control" rows="3" placeholder="Ваш комментарий к заказу"></textarea>
     </div>
-    <?php */ ?>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-similar-header">
+    <div class="col-lg-12 product-similar-header">
         <h3 class="lined"><span>С этим товаром чаще всего покупают</span></h3>
     </div>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 small-product-grid">
+    <div class="col-lg-12 small-product-grid">
         <div class="row">
             <?php for($i = 0; $i < 6; $i++): ?>
             <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3">
@@ -90,7 +77,7 @@ $photo_rand = rand(1, 10);
             <?php endfor; ?>
         </div>
     </div>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+    <div class="col-lg-12 text-center">
         <button type="button" class="btn btn-success btn-lg">Ещё N товаров</button>
     </div>
 </div>

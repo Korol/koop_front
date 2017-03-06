@@ -22,7 +22,7 @@ for ($i=1; $i < 24; $i++) {
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, assumenda.</p>
                 <div class="row collapse pt-buttons" id="btns_pt_<?=$i; ?>">
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-8">
-                        <div class="input-group">
+                        <div class="input-group product-qty-grid-block">
                             <span class="input-group-btn">
                                 <button class="btn btn-default pqminus" type="button" id="pqminus_<?=$i;?>">
                                     <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
@@ -37,7 +37,7 @@ for ($i=1; $i < 24; $i++) {
                         </div><!-- /input-group -->
                     </div>
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-4">
-                        <button class="btn btn-success pull-right" onclick="document.location.href='/cart.php';" role="button">Купить</button>
+                        <button class="btn btn-success pull-right grid-buy-btn" onclick="document.location.href='/cart.php';" role="button">Купить</button>
                     </div>
                 </div>
             </div>

@@ -192,6 +192,7 @@ if(!empty($_GET['category_id'])){
     </div>
 </div>
 
+<?php /* ?>
 <div class="row">
     <div class="col-lg-12 sidebar-banner">
         <h3 class="lined"><span>Реклама</span></h3>
@@ -219,3 +220,4 @@ if(!empty($_GET['category_id'])){
         </a>
     </div>
 </div>
+<?php */ ?>

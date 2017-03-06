@@ -53,7 +53,7 @@ $cart_total = 0;
             <span class="glyphicon glyphicon-print"></span> Печать
         </button>
     </div>
-    <div class="col-lg-12">
+    <div class="col-lg-12 cart-products-table-block">
         <table class="table table-bordered cart-products-table">
             <thead>
                 <th>#</th>
@@ -72,7 +72,7 @@ $cart_total = 0;
                 <td><?=$product['unit']; ?></td>
                 <td><span id="pprice_<?=$product['id'];?>"><?=$product['price']; ?></span> грн</td>
                 <td>
-                    <div class="input-group">
+                    <div class="input-group product-qty-grid-block">
                         <span class="input-group-btn">
                             <button class="btn btn-default ppqminus" type="button" id="ppqminus_<?=$product['id'];?>">
                                 <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
@@ -106,6 +106,7 @@ $cart_total = 0;
     </div>
     <div class="col-lg-12">
         <div class="alert alert-danger">
+            <b>Информация о Бесплатной доставке:</b><br>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt inventore explicabo provident itaque, nam ipsam nesciunt recusandae magni possimus est earum sed vel atque, quisquam saepe assumenda. Nisi cupiditate ut et, perferendis eos delectus sed eum sit quidem cum facilis suscipit aperiam reprehenderit vel voluptatem quo consequuntur magni neque aut!
         </div>
     </div>
@@ -114,6 +115,7 @@ $cart_total = 0;
 <div class="row cart-info-block">
     <div class="col-lg-12">
         <div class="well">
+            <b>Пояснения по заполнению этой формы:</b>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus ex, quia aliquid aut necessitatibus, repellat error ullam fugit asperiores vero doloribus, eius quos saepe molestiae at odio expedita inventore dolores iste doloremque tenetur officia, veritatis. Incidunt, facilis dicta sed dignissimos dolores consectetur nam sint, quis, perferendis eaque totam tenetur placeat.</p>
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
@@ -217,27 +219,33 @@ $cart_total = 0;
 
                     <form class="form-horizontal" name="orderForm" method="post" action="/thanks.php">
                         <div class="form-group">
-                                <label for="inputName4" class="col-sm-2 control-label">Имя</label>
-                                <div class="col-sm-10">
+                                <label for="inputName4" class="col-sm-3 control-label">Имя</label>
+                                <div class="col-sm-9">
                                   <input type="text" class="form-control" id="inputName4" placeholder="Иванов Иван Иванович">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputPhone4" class="col-sm-2 control-label">Телефон</label>
-                                <div class="col-sm-10">
+                                <label for="inputPhone4" class="col-sm-3 control-label">Телефон</label>
+                                <div class="col-sm-9">
                                   <input type="text" class="form-control" id="inputPhone4" placeholder="380631234567">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail4" class="col-sm-2 control-label">Email</label>
-                                <div class="col-sm-10">
+                                <label for="inputEmail4" class="col-sm-3 control-label">Email</label>
+                                <div class="col-sm-9">
                                   <input type="email" class="form-control" id="inputEmail4" placeholder="mail@example.com">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputAddress4" class="col-sm-2 control-label">Адрес доставки</label>
-                                <div class="col-sm-10">
+                                <label for="inputAddress4" class="col-sm-3 control-label">Адрес доставки</label>
+                                <div class="col-sm-9">
                                   <textarea class="form-control" id="inputAddress4" rows="3" placeholder="ул. Строителей, 42/53, домофон #53"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress4" class="col-sm-3 control-label">Комментарий к заказу</label>
+                                <div class="col-sm-9">
+                                  <textarea class="form-control" id="inputAddress4" rows="3" placeholder="Ваш комментарий к этому заказу"></textarea>
                                 </div>
                             </div>
                     </form>
