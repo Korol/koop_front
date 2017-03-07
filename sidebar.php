@@ -56,7 +56,17 @@ $menu = array(
                         'childs' => array(
                             0 => array(
                                 'id' => 20,
-                                'title' => 'Пирожки с картошкой'
+                                'title' => 'Пирожки с картошкой',
+                                'childs' => array(
+                                    0 => array(
+                                        'id' => 22,
+                                        'title' => 'ТМ Хлебодар'
+                                    ),
+                                    1 => array(
+                                        'id' => 23,
+                                        'title' => 'ТМ Пирожок'
+                                    ),
+                                ),
                             ),
                             1 => array(
                                 'id' => 21,
@@ -149,7 +159,7 @@ if(!empty($_GET['category_id'])){
             <?php $class_in = ($level1['id'] == $active_menu_id) ? ' in' : ''; ?>
             <?php $l1_active = ($level1['id'] == $active_menu_id) ? 'active' : ''; ?>
             <li role="presentation" class="<?=$l1_active;?>">
-                <a href="./category.php?category_id=<?=$level1['id'];?>"><?=$level1['title'];?></a>
+                <a class="s-menu-level1" href="./category.php?category_id=<?=$level1['id'];?>"><?=$level1['title'];?></a>
             </li>
             <?php
             if(!empty($level1['childs'])):
@@ -157,21 +167,41 @@ if(!empty($_GET['category_id'])){
                 <ul class="nav nav-pills nav-stacked sidebar-menu sidebar-menu-inner collapse<?=$class_in; ?>">
                 <?php foreach($level1['childs'] as $level2): ?>
                     <?php $l2_active = ($level2['id'] == $_GET['category_id']) ? 'active' : ''; ?>
-                    <li role="presentation" class="<?=$l2_active;?>"><a href="./category.php?category_id=<?=$level2['id'];?>"><?=$level2['title'];?></a></li>
+                    <li role="presentation" class="<?=$l2_active;?>">
+                        <a class="s-menu-level2" href="./category.php?category_id=<?=$level2['id'];?>"><?=$level2['title'];?></a>
+                    </li>
                     <?php
                     if(!empty($level2['childs'])):
                     ?>
                         <ul class="nav nav-pills nav-stacked sidebar-menu sidebar-menu-inner collapse<?=$class_in; ?>">
                         <?php foreach($level2['childs'] as $level3): ?>
                             <?php $l3_active = ($level3['id'] == $_GET['category_id']) ? 'active' : ''; ?>
-                            <li role="presentation" class="<?=$l3_active;?>"><a href="./category.php?category_id=<?=$level3['id'];?>"><?=$level3['title'];?></a></li>
+                            <li role="presentation" class="<?=$l3_active;?>">
+                                <a class="s-menu-level3" href="./category.php?category_id=<?=$level3['id'];?>"><?=$level3['title'];?></a>
+                            </li>
                             <?php
                             if(!empty($level3['childs'])):
                             ?>
                                 <ul class="nav nav-pills nav-stacked sidebar-menu sidebar-menu-inner collapse<?=$class_in; ?>">
                                 <?php foreach($level3['childs'] as $level4): ?>
                                     <?php $l4_active = ($level4['id'] == $_GET['category_id']) ? 'active' : ''; ?>
-                                    <li role="presentation" class="<?=$l4_active;?>"><a href="./category.php?category_id=<?=$level4['id'];?>"><?=$level4['title'];?></a></li>
+                                    <li role="presentation" class="<?=$l4_active;?>">
+                                        <a class="s-menu-level4" href="./category.php?category_id=<?=$level4['id'];?>"><?=$level4['title'];?></a>
+                                    </li>
+                                    <?php
+                                    if(!empty($level4['childs'])):
+                                    ?>
+                                        <ul class="nav nav-pills nav-stacked sidebar-menu sidebar-menu-inner collapse<?=$class_in; ?>">
+                                        <?php foreach($level4['childs'] as $level5): ?>
+                                            <?php $l5_active = ($level5['id'] == $_GET['category_id']) ? 'active' : ''; ?>
+                                            <li role="presentation" class="<?=$l5_active;?>">
+                                                <a class="s-menu-level5" href="./category.php?category_id=<?=$level5['id'];?>"><?=$level5['title'];?></a>
+                                            </li>
+                                        <?php endforeach; ?>
+                                        </ul>
+                                    <?php
+                                    endif;
+                                    ?>
                                 <?php endforeach; ?>
                                 </ul>
                             <?php

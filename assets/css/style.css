@@ -33,6 +33,8 @@ body {
     top: 15px;
     font-size: 20px;
 }
+
+/* Sidebar menu */
 .sidebar-menu-block {
     padding-top: 20px;
     padding-bottom: 30px;
@@ -40,21 +42,82 @@ body {
 .sidebar-menu {
     padding: 0 0 0 15px;
 }
-.sidebar-menu>li>a:focus, 
-.sidebar-menu>li>a:hover,
-.sidebar-menu>li.active>a,
-.sidebar-menu>li.active>a:focus,
-.sidebar-menu>li.active>a:hover {
+.sidebar-banner {
+    padding-left: 30px;
+    padding-right: 0;
+}
+.sidebar-menu>li>a {
+    color: #000;
+}
+.s-menu-level1 {
+    font-size: 18px;
+}
+.s-menu-level2 {
+    font-size: 17px;
+}
+.s-menu-level3 {
+    font-size: 16px;
+}
+.s-menu-level4 {
+    font-size: 15px;
+}
+.s-menu-level5 {
+    font-size: 14px;
+}
+/*
+Уровень 1: #92d32c
+Уровень 2: #a4da4f
+Уровень 3: #b6e170
+Уровень 4: #ceeb9f
+Уровень 5: #e1f3c4
+*/
+.sidebar-menu>li>a.s-menu-level1:focus, 
+.sidebar-menu>li>a.s-menu-level1:hover, 
+.sidebar-menu>li.active>a.s-menu-level1,
+.sidebar-menu>li.active>a.s-menu-level1:focus,
+.sidebar-menu>li.active>a.s-menu-level1:hover {
     text-decoration: none;
-    background-color: #3CC440;
+    background-color: #92d32c;
+    color: #000;
 }
-.sidebar-menu-inner>li>a:focus,
-.sidebar-menu-inner>li>a:hover,
-.sidebar-menu-inner>li.active>a,
-.sidebar-menu-inner>li.active>a:focus,
-.sidebar-menu-inner>li.active>a:hover {
-    background-color: #92C794;
+.sidebar-menu>li>a.s-menu-level2:focus, 
+.sidebar-menu>li>a.s-menu-level2:hover, 
+.sidebar-menu>li.active>a.s-menu-level2,
+.sidebar-menu>li.active>a.s-menu-level2:focus,
+.sidebar-menu>li.active>a.s-menu-level2:hover {
+    text-decoration: none;
+    background-color: #a4da4f;
+    color: #000;
 }
+.sidebar-menu>li>a.s-menu-level3:focus, 
+.sidebar-menu>li>a.s-menu-level3:hover, 
+.sidebar-menu>li.active>a.s-menu-level3,
+.sidebar-menu>li.active>a.s-menu-level3:focus,
+.sidebar-menu>li.active>a.s-menu-level3:hover {
+    text-decoration: none;
+    background-color: #b6e170;
+    color: #000;
+}
+.sidebar-menu>li>a.s-menu-level4:focus, 
+.sidebar-menu>li>a.s-menu-level4:hover, 
+.sidebar-menu>li.active>a.s-menu-level4,
+.sidebar-menu>li.active>a.s-menu-level4:focus,
+.sidebar-menu>li.active>a.s-menu-level4:hover {
+    text-decoration: none;
+    background-color: #ceeb9f;
+    color: #000;
+}
+.sidebar-menu>li>a.s-menu-level5:focus, 
+.sidebar-menu>li>a.s-menu-level5:hover, 
+.sidebar-menu>li.active>a.s-menu-level5,
+.sidebar-menu>li.active>a.s-menu-level5:focus,
+.sidebar-menu>li.active>a.s-menu-level5:hover {
+    text-decoration: none;
+    background-color: #e1f3c4;
+    color: #000;
+}
+
+/* Products grid */
 .products-grid {
     padding: 20px 15px 30px;
 }
@@ -115,11 +178,6 @@ h3.lined:before {
     top: 50%;
   width: 94%;
   left: 3%;
-}
-
-.sidebar-banner {
-    padding-left: 30px;
-    padding-right: 0;
 }
 
 /* Product page */
